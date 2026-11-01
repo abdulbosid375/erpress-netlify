@@ -7,15 +7,13 @@ app.get("/", (req,res) =>{
     res.send("Welcome to my API");
 });
 
-app.get("/about", (req, res) => {
+app.get("/kino", (req, res) => {
     res.json({
-        name: "Ali",
-        age: "15",
-        hobby: {
-            1: "music",
-            2: "coding",
-            3: "gaming"
-        }
+        1: "olov",
+        2: "sarguzasht",
+        3: "mashenij",
+        4: "otlar",
+        5: "flash"
     });
 });
 
