@@ -1,17 +1,17 @@
-<form onsubmit="login(event)">
-  <input id="name" placeholder="Ism">
-  <input id="password" type="password" placeholder="Parol">
-  <button>Enter</button>
-</form>
+<input id="name" placeholder="Ism">
+<input id="password" type="password" placeholder="Parol">
+
+<button onclick="login()">Enter</button>
 
 <script>
-  function login(e) {
-    e.preventDefault();
+function login() {
+  let ism = document.getElementById("name").value;
+  let parol = document.getElementById("password").value;
 
-    if (name.value == "admin" && password.value == "1234") {
-      location.href = "home.html";
-    } else {
-      alert("Sorry");
-    }
+  if (ism == "admin" && parol == "admin") {
+    window.location.href = "./home.html";
+  } else {
+    alert("Sorry");
   }
+}
 </script>
