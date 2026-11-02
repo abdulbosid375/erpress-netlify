@@ -4,7 +4,7 @@ import path from "path"
 const app = express();
 const __dirname = path.relative()
 app.get("/", (req,res) =>{
-    res.send(__dirname + "/dist/index.html");
+    res.sendFile(__dirname + "/dist/index.html");
 });
 
 export const handler = ServerlessHttp(app);
