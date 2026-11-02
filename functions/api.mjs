@@ -1,22 +1,10 @@
 import express from "express";
 import ServerlessHttp from "serverless-http";
-
+import path from "path"
 const app = express();
-
+const __dirname = path.resolve();
 app.get("/", (req, res) => {
-    res.send("Welcome to my API");
-});
-
-app.get("/about", (req, res) => {
-    res.json({
-        name: "Ali",
-        age: "15",
-        hobby: {
-            1: "music",
-            2: "coding",
-            3: "gaming"
-        }
-    });
+    res.sendFile(__dirname + "/dist/index.html")
 });
 
 export const handler = ServerlessHttp(app);
