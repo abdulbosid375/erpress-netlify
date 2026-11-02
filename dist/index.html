@@ -1,156 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre-Demo Day Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111827;
+      font-family: Arial;
+    }
 
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #10172a, #243b63);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 15px;
-        }
+    form {
+      background: white;
+      padding: 35px;
+      width: 280px;
+      border-radius: 12px;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 550px;
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px #0005;
-        }
+    h2 {
+      text-align: center;
+    }
 
-        h1 {
-            text-align: center;
-            color: #172554;
-            margin-bottom: 10px;
-        }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+    }
 
-        .subtitle {
-            text-align: center;
-            color: #777;
-            margin-bottom: 30px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            margin-top: 18px;
-            color: #222;
-            font-weight: bold;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #ddd;
-            border-radius: 9px;
-            outline: none;
-            font-size: 15px;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: #2563eb;
-        }
-
-        textarea {
-            height: 100px;
-            resize: vertical;
-        }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            margin-top: 25px;
-            background: #2563eb;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 17px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #172554;
-            transform: translateY(-2px);
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #888;
-            font-size: 13px;
-        }
-    </style>
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="container">
+  <form action="home.html" method="get">
+    <h2>Login</h2>
 
-        <h1>🚀 Pre-Demo Day</h1>
-        <p class="subtitle">Loyihangizni bizga tanishtiring!</p>
+    <input type="text" name="name" placeholder="Ismingiz" required>
 
-        <form id="demoForm">
+    <input type="email" name="email" placeholder="Email" required>
 
-            <label>Ism va familiya</label>
-            <input type="text" placeholder="Ismingizni kiriting" required>
+    <input type="password" name="password" placeholder="Password" required>
 
-            <label>Guruh nomi</label>
-            <input type="text" placeholder="Masalan: React-01" required>
-
-            <label>Loyiha nomi</label>
-            <input type="text" placeholder="Loyiha nomini kiriting" required>
-
-            <label>Yo'nalish</label>
-            <select required>
-                <option value="">Yo'nalishni tanlang</option>
-                <option>Frontend</option>
-                <option>Backend</option>
-                <option>Fullstack</option>
-                <option>Mobile</option>
-            </select>
-
-            <label>Qaysi texnologiyalardan foydalandingiz?</label>
-            <input type="text" placeholder="HTML, CSS, JavaScript, React...">
-
-            <label>Github havolasi</label>
-            <input type="url" placeholder="https://github.com/...">
-
-            <label>Loyiha haqida</label>
-            <textarea placeholder="Loyihangiz haqida qisqacha yozing..." required></textarea>
-
-            <label>Telefon raqamingiz</label>
-            <input type="tel" placeholder="+998 90 123 45 67" required>
-
-            <button type="submit">Loyihani yuborish →</button>
-
-        </form>
-
-        <p class="footer">Junior IT Academy | Pre-Demo Day 2026</p>
-
-    </div>
-
-    <script>
-        document.getElementById("demoForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            alert("Tabriklaymiz! Formangiz yuborildi 🚀");
-            this.reset();
-        });
-    </script>
+    <button type="submit">Enter</button>
+  </form>
 
 </body>
 </html>
